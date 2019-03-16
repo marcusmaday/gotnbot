@@ -1,0 +1,12 @@
+{
+  "name": "gotnbot",
+  "version": "1.0.0",
+  "description": "A Bot for Gamers of the North tasks",
+  "main": "bot.js",
+  "author": "MM",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^11.4.2",
+    "winston": "^3.2.1"
+  }
+}

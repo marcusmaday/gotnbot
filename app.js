@@ -1,4 +1,6 @@
-var Discord = require('discord.js');
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
 var logger = require('winston');
 var auth = require('./auth.json');
 // Configure logger settings
@@ -8,15 +10,12 @@ logger.add(new logger.transports.Console, {
 });
 logger.level = 'debug';
 
-// Create an instance of a Discord client
-const client = new Discord.Client();
-
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
  */
 client.on('ready', () => {
-  console.log('GotNBot is ready to ROCK!');
+  logger.info(`Logged in as ${client.user.tag}!`);
 });
 
 // Create an event listener for messages

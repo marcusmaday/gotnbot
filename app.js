@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const auth = require('./auth.json');
+var client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -11,7 +12,8 @@ client.on('message', msg => {
   }
 });
 
-client.login('NTU2NTU2Mjk5MTI3NjE5NTg2.D27dmg.LH0dqheTWCkmdy_o6XXZKxT4SzM');
+console.log(auth.token);
+client.login(auth.token);
 
 // const Discord = require('discord.js');
 // const client = new Discord.Client();
